@@ -1,0 +1,19 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: ethereum-deployment
+spec:
+  replicas: 2 
+  template: 
+    metadata:
+      labels:
+        app: ethereum
+    spec:
+      containers:
+      - name: ethereum
+        image: ethereumex/geth-node
+        ports:
+        - containerPort: 8545
+        - containerPort: 8546
+        - containerPort: 30303
+
