@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: ipfs-deployment
+spec:
+  replicas: 2 
+  template: 
+    metadata:
+      labels:
+        app: ipfs
+    spec:
+      containers:
+      - name: ipfs
+        image: ipfs/go-ipfs
+        ports:
+        - containerPort: 4001
+        - containerPort: 5001
+        - containerPort: 8080
+        - containerPort: 8081
+
