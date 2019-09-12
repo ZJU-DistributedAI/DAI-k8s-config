@@ -11,23 +11,23 @@ spec:
     spec:
       containers:
       - name: ipfs
-        image: docker.io/ipfs/go-ipfs:latest
+        image: zjudistributeai/ipfs:v0.1
         ports:
         - containerPort: 4001
         - containerPort: 5001
         - containerPort: 8080
         - containerPort: 8081
-        volumeMounts:
-        - mountPath: /data/ipfs
-          name: ipfs-data
-        - mountPath: /export
-          name: ipfs-staging
-      volumes:
-      - name: ipfs-data
-        hostPath:
-          path: /home/hyf/ipfs/data
-      - name: ipfs-staging
-        hostPath:
-          path: /home/hyf/ipfs/staging
+      #   volumeMounts:
+      #   - mountPath: /data/ipfs
+      #     name: ipfs-data
+      #   - mountPath: /export
+      #     name: ipfs-staging
+      # volumes:
+      # - name: ipfs-data
+      #   hostPath:
+      #     path: /home/hyf/ipfs/data
+      # - name: ipfs-staging
+      #   hostPath:
+      #     path: /home/hyf/ipfs/staging
        
 
