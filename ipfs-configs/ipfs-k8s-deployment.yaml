@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: ipfs-deployment
 spec:
-  replicas: 1 
+  replicas: 3 
   template: 
     metadata:
       labels:
@@ -17,20 +17,6 @@ spec:
         - containerPort: 5001
         - containerPort: 8080
         - containerPort: 8081
-      - name: ipfs2
-        image: zjudistributeai/ipfs:v0.2
-        ports:
-        - containerPort: 4001
-        - containerPort: 5002
-        - containerPort: 8082
-        - containerPort: 8083
-      - name: ipfs3
-        image: zjudistributeai/ipfs:v0.2
-        ports:
-        - containerPort: 4001
-        - containerPort: 5003
-        - containerPort: 8084
-        - containerPort: 8085
       #   volumeMounts:
       #   - mountPath: /data/ipfs
       #     name: ipfs-data
