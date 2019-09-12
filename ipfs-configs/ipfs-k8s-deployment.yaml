@@ -19,18 +19,18 @@ spec:
         - containerPort: 8081
       - name: ipfs2
         image: zjudistributeai/ipfs:v0.2
-        ports:
-        - containerPort: 4001
-        - containerPort: 5001
-        - containerPort: 8080
-        - containerPort: 8081
+        # ports:
+        # - containerPort: 4001
+        # - containerPort: 5001
+        # - containerPort: 8080
+        # - containerPort: 8081
       - name: ipfs3
         image: zjudistributeai/ipfs:v0.2
-        ports:
-        - containerPort: 4001
-        - containerPort: 5001
-        - containerPort: 8080
-        - containerPort: 8081
+        # ports:
+        # - containerPort: 4001
+        # - containerPort: 5001
+        # - containerPort: 8080
+        # - containerPort: 8081
       #   volumeMounts:
       #   - mountPath: /data/ipfs
       #     name: ipfs-data
