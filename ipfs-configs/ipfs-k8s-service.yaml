@@ -8,10 +8,12 @@ spec:
     app: ipfs
   ports:
     - protocol: TCP
+      name: webui
       port: 5001
       targetPort: 5001
       nodePort: 30001
     - protocol: TCP
+      name: ipfshttp
       port: 8080
       targetPort: 8080
       nodePort: 30002
