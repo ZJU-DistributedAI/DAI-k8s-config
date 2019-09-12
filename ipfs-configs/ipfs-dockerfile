@@ -1,0 +1,4 @@
+FROM ipfs/go-ipfs:v0.4.22
+RUN ipfs init && ipfs bootstrap rm --all && ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin '["*"]' && ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["PUT", "GET", "POST"]'
+COPY swarm.key /data/ipfs/
+CMD ["daemon","--migrate=true"]

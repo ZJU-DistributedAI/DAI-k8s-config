@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: ipfs
-        image: zjudistributeai/ipfs:v0.1
+        image: zjudistributeai/ipfs:v0.2
         ports:
         - containerPort: 4001
         - containerPort: 5001
