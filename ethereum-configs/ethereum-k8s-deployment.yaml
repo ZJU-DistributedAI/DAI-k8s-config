@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: ethereum
-        image: ethereumex/geth-node
+        image: ethereum/client-go:v1.8.12
         ports:
         - containerPort: 8545
         - containerPort: 8546
