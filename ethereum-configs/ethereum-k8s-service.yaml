@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: ethereum-service
+spec:
+  type: NodePort
+  selector:
+    app: ethereum
+  ports:
+    - protocol: TCP
+      name: rpc
+      port: 8545
+      targetPort: 8545
+      nodePort: 31001
+    
